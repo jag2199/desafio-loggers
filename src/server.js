@@ -115,7 +115,8 @@ if (cluster.isMaster && MODE) {
     })
 
     // server
-    const server = httpServer.listen(args.PORT, () => {
+    PORT = args.PORT || process.env.PORT
+    const server = httpServer.listen(PORT, () => {
         console.log(`Servidor iniciado en el puerto ${server.address().port} ( http://localhost:${server.address().port} ) PID: ${process.pid}`)
     })
 

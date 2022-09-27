@@ -1,6 +1,6 @@
 import { Router } from "express"
 import ProductosContainer from "../daos/productos.js"
-import logger from "../loggers.js"
+import logger from "../utils/loggers.js"
 
 const router = Router()
 
@@ -21,10 +21,10 @@ router.get("/", isAuth, (req, res) => {
     res.render("index", { productos: container.getAll(), nombre: req.user.nombre })
 })
 
-router.get("*", (req, res) => {
-    logger.warn(`Ruta ${req.originalUrl} no encontrada`)
-    res.send("Esta ruta no existe")
-})
+// router.get("*", (req, res) => {
+//     logger.warn(`Ruta ${req.originalUrl} no encontrada`)
+//     res.send("Esta ruta no existe")
+// })
 
 // router.get("/productos", (req, res) => {
 //     res.render("productos",)

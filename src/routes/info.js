@@ -11,9 +11,9 @@ const info = {
     "ID del proceso": process.pid,
     "Uso de la memoria": process.memoryUsage(),
     "Memoria total reservada (rss)": process.memoryUsage().rss,
-    "path de ejecución": process.execPath, //donde está el ejecutable de node
+    "path de ejecución": process.execPath,
     "Argumentos de entrada": process.argv,
-    "Numero de procesadores": os.cpus().length
+    // "Numero de procesadores": os.cpus().length
 }
 
 router.get("/zip", compression(), (req, res) => {

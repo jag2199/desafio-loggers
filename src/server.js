@@ -115,7 +115,7 @@ io.on("connection", (socket) => {
 })
 
 // server
-const PORT = args.PORT || process.env.PORT
+const PORT = process.env.PORT || args.PORT
 const server = httpServer.listen(PORT, () => {
     console.log(`Servidor iniciado en el puerto ${server.address().port} ( http://localhost:${server.address().port} ) PID: ${process.pid}`)
 })

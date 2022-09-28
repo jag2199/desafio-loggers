@@ -17,8 +17,9 @@ function isAuth(req, res, next) {
     }
 }
 
-router.get("/", isAuth, (req, res) => {
-    res.render("index", { productos: container.getAll(), nombre: req.user.nombre })
+router.get("/", (req, res) => {
+    // res.render("index", { productos: container.getAll(), nombre: req.user.nombre })
+    res.redirect("/info")
 })
 
 // router.get("*", (req, res) => {

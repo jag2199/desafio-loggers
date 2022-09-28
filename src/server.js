@@ -73,7 +73,7 @@ if (cluster.isMaster && MODE) {
             resave: true,
             saveUninitialized: true,
             store: MongoStore.create({
-                mongoUrl: `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PWD}@clustercab.kfxke.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+                mongoUrl: `mongodb+srv://jonathan:mongo753@clustercab.kfxke.mongodb.net/session2?retryWrites=true&w=majority`,
                 ttl: 60 * 10
             })
         }
